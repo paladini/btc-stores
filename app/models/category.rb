@@ -1,2 +1,9 @@
-class Category < ActiveRecord::Base
+class Category < ActiveRecord::Base 
+
+	extend FriendlyId
+	friendly_id :name, use: :slugged
+
+	# Validations
+	validates_uniqueness_of :name, :case_sensitive => false
+
 end

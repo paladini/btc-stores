@@ -32,6 +32,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+# Friendly ID for the urls
+gem 'friendly_id', "~> 5.0.1"
+
 group :development do
 	gem 'sqlite3'
 end
