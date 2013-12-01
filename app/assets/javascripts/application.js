@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require foundation/foundation.min.js
+//= require foundation/foundation.min
 //= require_tree ./foundation/vendor
 // require_tree .

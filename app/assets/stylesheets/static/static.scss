@@ -48,3 +48,25 @@ footer a{
 	color: #cbb2b2;
 	padding-right: 20px;
 }
+
+.store{
+	background-color: #FFF;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.store-left{
+	display: inline-block;
+	height: auto;
+	width: auto;
+}
+
+.store-right{
+	text-align: right;
+	float: right;
+	display: inline-block;
+	height: auto;
+	width: auto;
+	margin: auto 0;
+}
