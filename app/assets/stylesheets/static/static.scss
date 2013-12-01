@@ -1,0 +1,49 @@
+html, body{
+	height: 100%;
+}
+
+header{
+	width: 100%;
+	background-color: #000;
+	min-height: 90%; 
+	padding-top: 10%;
+}
+
+header h1, h2, h3{
+	color: #FFF;
+}
+
+header h3{
+	margin-bottom: 100px;
+}
+
+#center{
+	margin: auto;
+	text-align: center;
+}
+
+#featured a{
+	padding-right: 20px;
+}
+
+#featured a:last-child{
+	padding-right: 0px;
+}
+
+#cinza{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#suggest{
+	text-align: right;
+}
+
+footer{
+	padding-bottom: 20px;
+	margin-bottom: 5px;
+}
+
+footer a{
+	color: #cbb2b2;
+}

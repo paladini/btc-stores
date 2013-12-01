@@ -1,4 +1,13 @@
 BtcStores::Application.routes.draw do
+  
+
+  get "static/index" => "static#index"
+  get "static/about" => "static#about"
+  get "static/contact" => "static#contact"
+  get "static/resume" => "static#resume"
+  
+  root 'static#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
