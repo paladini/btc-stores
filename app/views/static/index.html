@@ -62,8 +62,8 @@
       <div class="row">
         <h3>Recently added stores:</h3>
         <br/>
-        <div class="store">
-          <a href="">
+        <a href="">
+          <div class="store">
             <div class="store-left">
               <div class="store-name">
                 <h4>BitCoin Electronics</h4>
@@ -77,8 +77,8 @@
                 <img src="http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg" height="52" width="52" />
               </div>
             </div>
-          </a>
-        </div>
+          </div>
+        </a>
     </div>
       <br/><br/>
       <div class="row">
@@ -86,17 +86,16 @@
           <a href="" class="button large secondary">Add a store to our website</a>
         </div>
     	</div>
-   
-
-    <footer>
-      <div class="row" style="text-align: left;">
-        <a href="">Home Page</a>
-        <a href="">About</a>
-        <a href="">All categories</a>
-        <a href="">Advertise</a>
-        <a href="">Contact</a>
-      </div>
-    </footer>
+      
+      <footer>
+        <div class="row" style="text-align: left;">
+          <%= link_to "Home Page", controller: 'static', action: 'index' %>
+          <%= link_to "About", controller: 'static', action: 'about' %>
+          <%= link_to "All categories" %>
+          <%= link_to "Advertise" %>
+          <%= link_to "Contact", controller: 'static', action: 'contact' %>
+        </div>
+      </footer>
      </div>
     
     <script src="js/jquery.js"></script>

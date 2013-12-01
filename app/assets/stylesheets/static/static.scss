@@ -51,9 +51,15 @@ footer a{
 
 .store{
 	background-color: #FFF;
+	transition: background-color 0.3s linear 0.1s;
 	width: 100%;
 	height: auto;
 	padding: 10px;
+}
+
+.store:hover{
+	background-color: #ddd3d3;
+	transition: background-color 0.5s linear 0.1s;
 }
 
 .store-left{
