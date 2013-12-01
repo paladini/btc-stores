@@ -1,7 +1,7 @@
 BtcStores::Application.routes.draw do
   
 
-  resources :categories
+  resources :categories, :only => [:show, :index]
   # get "categories/:name" => "categories#show"
 
   get "static/index" => "static#index"
