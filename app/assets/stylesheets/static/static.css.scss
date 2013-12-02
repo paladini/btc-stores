@@ -1,0 +1,111 @@
+html, body{
+	height: 100%;
+}
+
+header{
+	width: 100%;
+	background-color: #000;
+}
+
+header h1, h2, h3{
+	color: #FFF;
+}
+
+header h1:hover, h2:hover, h3:hover{
+	
+}
+
+#general-header{
+	min-height: 15% !important;
+	padding-top: 10px !important;
+}
+
+#general-header h1{
+	margin: 0px;
+	padding: 0px;
+}
+
+#general-header h1 a{
+	margin: 0px;
+	padding: 0px;
+	color: #FFF;
+	transition: color 0.3s linear 0.1s;
+}
+
+#general-header h1 a:hover{
+	color: #9dc1f2;
+	transition: color 0.3s linear 0.1s;
+}
+
+#index-header{
+	min-height: 90%; 
+	padding-top: 10%;
+}
+
+#index-header h3{
+	margin-bottom: 100px;
+}
+
+#searchbar-top{
+	padding-top: 20px;
+}
+
+#center{
+	margin: auto;
+	text-align: center;
+}
+
+#featured a{
+	padding-right: 20px;
+}
+
+#featured a:last-child{
+	padding-right: 0px;
+}
+
+#cinza{
+	padding-top: 5%;
+	margin: 0px;
+}
+
+#suggest{
+	text-align: right;
+}
+
+footer{
+	padding-top: 5%;
+	font-size: 14px;
+}
+
+footer a{
+	color: #cbb2b2;
+	padding-right: 20px;
+}
+
+.store{
+	background-color: #FFF;
+	transition: background-color 0.2s linear 0.1s;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.store:hover{
+	background-color: #ddd3d3;
+	transition: background-color 0.3s linear 0.1s;
+}
+
+.store-left{
+	display: inline-block;
+	height: auto;
+	width: auto;
+}
+
+.store-right{
+	text-align: right;
+	float: right;
+	display: inline-block;
+	height: auto;
+	width: auto;
+	margin: auto 0;
+}

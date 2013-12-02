@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>BTC-Stores - Buy with Bitcoins</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-  <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
+	<head>
+	  <title>BTC-Stores - Buy with Bitcoins</title>
+	  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	
+	<body>
 
-<%= yield %>
+		<!-- Will render only if is not in "static page" -->
+		<%= render :partial => "layouts/header" unless @render_header %> 
 
-<% if false %>
-	<%= yield :footer %>
-<% end %>
+		<%= yield %>
 
-</body>
+		<% if false %>
+			<%= yield :footer %>
+		<% end %>
+
+		<script>
+		  $(document).foundation();
+		</script>
+
+	</body>
 </html>

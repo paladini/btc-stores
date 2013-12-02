@@ -1,0 +1,89 @@
+<header id="index-header">
+    <div class="row">
+      <div class="small-12 large-12 columns text-center">
+        <h1>BTC-Stores</h1> 
+        <h3>The best way to find bitcoin stores worldwide.</h3>
+      </div>
+    </div>
+
+    <div class="large-12 columns">
+      <div class="row collapse">
+        <div class="large-2 columns">&nbsp;</div>
+        <div class="small-6 columns">
+          <input type="text" placeholder="Search stores by term, name or country..." />
+        </div>
+        <div class="small-2 columns">
+          <a href="" class="postfix button">Search</a>
+        </div>
+        <div class="large-2 columns">&nbsp;</div>
+      </div>
+    </div>
+
+    <br/>
+    
+    <div class="row">
+      <nav>
+        <div id="featured" class="small-8 large-12 columns text-center">
+          <p>
+            <a href="<%= url_for categories_path + '/electronics' %>">Electronics</a>
+            <a href="<%= url_for categories_path + '/music' %>">Music</a>
+            <a href="<%= url_for categories_path + '/books-and-reading' %>">Books and Reading</a>
+            <a href="<%= url_for categories_path + '/sports' %>">Sports</a>
+            <a href="<%= url_for categories_path + '/health-personal-care' %>">Health & Personal Care</a>
+            <a href="<%= url_for categories_path + '/toys' %>">Toys</a>
+          </p>
+          
+          <p>
+            <a href="<%= url_for categories_path + '/software-games' %>">Softwares & Games</a>
+            <a href="<%= url_for categories_path + '/food' %>">Food</a>
+            <a href="<%= url_for categories_path + '/miscellaneous' %>">Miscellaneous</a>
+            <a href="<%= url_for categories_path + '/home-and-garden' %>">Home & Garden</a>
+          </p>
+
+        </div>
+      </nav>
+    </div>
+    </div>
+</header>
+
+<div class="panel" id="cinza">
+  <div class="row">
+    <h3>Recently added stores:</h3>
+    <br/>
+    <a href="">
+      <div class="store">
+        <div class="store-left">
+          <div class="store-name">
+            <h4>BitCoin Electronics</h4>
+          </div>
+          <div class="description">
+            Bitcoin Electronics sells everything that can bring you life back from the 80's.
+          </div>
+        </div>
+        <div class="store-right">
+          <div class="store-country">
+            <img src="http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg" height="52" width="52" />
+          </div>
+        </div>
+      </div>
+    </a>
+</div>
+<br/><br/>
+<div class="row">
+  <div class="large-12 columns large-centered text-center">
+    <a href="" class="button large secondary">Add a store to our website</a>
+  </div>
+</div>
+
+<footer>
+  <div class="row" style="text-align: left;">
+    <%= link_to "Home Page", controller: 'static', action: 'index' %>
+    <%= link_to "About", controller: 'static', action: 'about' %>
+    <%= link_to "All categories", categories_path %>
+    <%= link_to "Advertise" %>
+    <%= link_to "Contact", controller: 'static', action: 'contact' %>
+  </div>
+</footer>
+</div>
+
+

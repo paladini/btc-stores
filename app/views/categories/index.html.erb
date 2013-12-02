@@ -1,23 +1,43 @@
-<h1>Listing categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
+<div class="panel" id="cinza">
+  <div class="row">
+    <h3>Categories:</h3>
+    <br/>
     <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= link_to 'Show', category %></td>
-      </tr>
+    <a href="<%= url_for category %>">
+      <div class="store">
+        <div class="store-left">
+          <div class="store-name">
+            <h4><%= category.name %></h4>
+          </div>
+          <!-- <div class="description">
+            Bitcoin Electronics sells everything that can bring you life back from the 80's.
+          </div> -->
+        </div>
+        <!-- <div class="store-right">
+          <div class="store-country">
+            <img src="http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg" height="52" width="52" />
+          </div>
+        </div> -->
+      </div>
+    </a>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <br/><br/>
+  <div class="row">
+    <div class="large-12 columns large-centered text-center">
+      <a href="" class="button large secondary">Add a store to our website</a>
+    </div>
+  </div>
 
-<br>
+  <footer>
+    <div class="row" style="text-align: left;">
+      <%= link_to "Home Page", controller: 'static', action: 'index' %>
+      <%= link_to "About", controller: 'static', action: 'about' %>
+      <%= link_to "All categories" %>
+      <%= link_to "Advertise" %>
+      <%= link_to "Contact", controller: 'static', action: 'contact' %>
+    </div>
+  </footer>
+</div>
