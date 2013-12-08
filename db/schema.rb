@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201165630) do
+ActiveRecord::Schema.define(version: 20131207235423) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -21,5 +21,27 @@ ActiveRecord::Schema.define(version: 20131201165630) do
   end
 
   add_index "categories", ["slug"], name: "index_categories_on_slug", unique: true, using: :btree
+
+  create_table "countries", force: true do |t|
+    t.string   "short_name"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url_original"
+    t.string   "url_shortned"
+    t.integer  "isActive"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "country_id"
+    t.integer  "category_id"
+  end
+
+  add_index "items", ["category_id"], name: "index_items_on_category_id", using: :btree
+  add_index "items", ["country_id"], name: "index_items_on_country_id", using: :btree
 
 end

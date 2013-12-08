@@ -5,12 +5,14 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.find(:all, :order => "name")
+
   end
 
   # GET /categories/1
   # GET /categories/1.json
   def show
     #@category = Category.find_by_slug(params[:id])
+    @countries = Country.find(:all, :order => "name")
   end
 
   # GET /categories/new
