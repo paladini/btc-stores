@@ -1,6 +1,11 @@
 class Item < ActiveRecord::Base
 
-	has_one :country
+	# Relationship with Country
+	belongs_to :country
+	accepts_nested_attributes_for :country
 
-	has_one :category 
+	# Relationship with Category
+	belongs_to :category 
+	accepts_nested_attributes_for :category
+
 end

@@ -12,7 +12,19 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     #@category = Category.find_by_slug(params[:id])
-    @countries = Country.find(:all, :order => "name")
+    #@countries = Country.find(:all, :order => "name")
+
+    # Get the countries that have some Item listed and add to list.
+    populated_countries = []
+    @category.item.each do |item|
+      populated_countries << item.country
+    end
+
+    @countries = populated_countries
+
+    # Sorting "@countries" by name ascending
+    @countries = @countries.sort_by{|e| e[:name]}
+
   end
 
   # GET /categories/new

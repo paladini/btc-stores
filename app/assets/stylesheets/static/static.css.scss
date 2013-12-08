@@ -84,15 +84,16 @@ footer a{
 
 .store{
 	background-color: #FFF;
-	transition: background-color 0.2s linear 0.1s;
+	transition: all 0.2s linear 0.1s;
 	width: 100%;
 	height: auto;
-	padding: 10px;
+	/* padding: 10px; */
 }
 
 .store:hover{
 	background-color: #ddd3d3;
-	transition: background-color 0.3s linear 0.1s;
+	transition: all 0.3s linear 0.1s;
+	border-color: #000;
 }
 
 .store-left{
@@ -109,3 +110,29 @@ footer a{
 	width: auto;
 	margin: auto 0;
 }
+
+.store-above{
+	padding: 10px;
+}
+
+.store-bottom{
+	/* background-color: #ddd3d3; #bdb3b3 */
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	margin: 0px;
+	border-top: 1px solid #bdb3b3;
+}
+
+.store-bottom .left {
+	height: 100%;
+}
+
+.store-bottom .right {
+	height: 100%;
+}
+
+/* .store-bottom p{
+	padding: 0px;
+	margin: 0px;
+} */
