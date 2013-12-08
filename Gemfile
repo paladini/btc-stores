@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Ruby
-ruby "1.9.3"
+ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -31,6 +31,9 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+# GEM to make request over the internet - HTTP requests (Post, Get, Put, Delete, etc.)
+gem "unirest", "~> 1.1.1"
 
 # Friendly ID for the urls
 gem 'friendly_id', "~> 5.0.1"

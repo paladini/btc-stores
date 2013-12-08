@@ -1,15 +1,22 @@
 BtcStores::Application.routes.draw do
   
 
-  resources :categories, :only => [:show, :index]
-  # get "categories/:name" => "categories#show"
-
+  # Static pages
+  root 'static#index'
   get "static/index" => "static#index"
   get "static/about" => "static#about"
   get "static/contact" => "static#contact"
   get "static/resume" => "static#resume"
+
+  # Dinamically pages
+
+  resources :categories, :only => [:show, :index]
   
-  root 'static#index'
+  # :path => "stores" - Just rename the path from .../items/1 to .../stores/1
+  resources :items, :path => "stores"
+
+  # get "categories/:name" => "categories#show"
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
