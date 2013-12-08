@@ -50,23 +50,29 @@
   <div class="row">
     <h3>Recently added stores:</h3>
     <br/>
-    <a href="">
-      <div class="store">
-        <div class="store-left">
-          <div class="store-name">
-            <h4>BitCoin Electronics</h4>
+    <% @items.each do |store| %>
+      <% if store.isActive == 1 %>
+        <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
+          <div class="store">
+            
+            <div class="store-above">
+              <div class="store-left">
+                <div class="store-name">
+                  <h4><%= store.name %></h4>
+                </div>
+                <div class="description">
+                  <%= store.description %>
+                </div>
+              </div>
+            </div>
+            <div class="store-bottom">
+              <div class="left">#<%= store.category.name %></div>
+              <div class="right">#<%= store.country.name %></div>
+            </div>
           </div>
-          <div class="description">
-            Bitcoin Electronics sells everything that can bring you life back from the 80's.
-          </div>
-        </div>
-        <div class="store-right">
-          <div class="store-country">
-            <img src="http://foundation.zurb.com/docs/assets/img/examples/earth-th-sm.jpg" height="52" width="52" />
-          </div>
-        </div>
-      </div>
-    </a>
+        </a>
+      <% end %>
+    <% end %>
 </div>
 <br/><br/>
 <div class="row">
