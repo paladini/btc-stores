@@ -38,6 +38,9 @@ gem "unirest", "~> 1.1.1"
 # Friendly ID for the urls
 gem 'friendly_id', "~> 5.0.1"
 
+# Generate a seeds.rb from a pre-existing database (seeds.rb populate the DB)
+gem "seed_dump", "~> 3.0.0"
+
 group :development do
 	gem 'sqlite3'
 end
