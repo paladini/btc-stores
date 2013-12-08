@@ -11,6 +11,7 @@ BtcStores::Application.routes.draw do
   # Dinamically pages
 
   resources :categories, :only => [:show, :index]
+  resources :country, :only => [:show, :index]
   
   # :path => "stores" - Just rename the path from .../items/1 to .../stores/1
   resources :items, :path => "stores"

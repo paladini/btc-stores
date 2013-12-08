@@ -1,42 +1,48 @@
 <div class="panel" id="cinza">
-  <div class="row">
-  	<h4><a href="<%= url_for :controller => 'categories', :action => 'index' %>"><< All categories</a></h4><br>
-    <div class="large-8 medium-8 columns">
-	    <h3><%= @category.name %></h3><br>
-	    
-	    <% @category.item.each do |store| %>
-		    <% if store.isActive == 1 %>
-			    <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
-			      <div class="store">
-			        
-			        <div class="store-above">
-				        <div class="store-left">
-				          <div class="store-name">
-				            <h4><%= store.name %></h4>
-				          </div>
-				          <div class="description">
-				            <%= store.description %>
-				          </div>
-				        </div>
-			        </div>
-			        <div class="store-bottom">
-			        	<div class="left">#<%= store.category.name %></div>
-			        	<div class="right">#<%= store.country.name %></div>
-			        </div>
-			      </div>
-			    </a>
-		    <% end %>
-	    <% end %>
-    </div>
-    <div class="large-4 medium-4 columns">
-    	<h3>By country: </h3><br/>
-    	<% @countries.each do |country| %>
-    		<a href="<%= url_for countries_path + country %>">
-	    		<div class="country">
-	    			<%= country.name %>
-	    		</div>
-    		</a>
-    	<% end %>
-    </div>
-</div>
+    <div class="row">
+	  	<h4><a href="<%= url_for :controller => 'categories', :action => 'index' %>"><< All categories</a></h4><br>
+	    <div class="large-8 medium-8 columns">
+		    <h3><%= @category.name %></h3><br>
+		    
+		    <% if @category.item.size > 0 %>
+			    <% @category.item.each do |store| %>
+				    <% if store.isActive == 1 %>
+					    <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
+					      <div class="store">
+					        <div class="store-above">
+						        <div class="store-left">
+						          <div class="store-name">
+						            <h4><%= store.name %></h4>
+						          </div>
+						          <div class="description">
+						            <%= store.description %>
+						          </div>
+						        </div>
+					        </div>
+					        <div class="store-bottom">
+					        	<div class="left">#<%= store.category.name %></div>
+					        	<div class="right">#<%= store.country.name %></div>
+					        </div>
+					      </div>
+					    </a>
+				    <% end %>
+			    <% end %>
+			<% else %>
+				<h5>Wow, seems that we don't have a Store here.</h5>
+				<h5> Try to search <a href="<%= url_for category_path %>">all categories</a> or help us improve the site and <a>add a store</a>.</h5>		
+			<% end %>
+	    </div>
+	    <div class="large-4 medium-4 columns">
+	    	<% if @category.item.size > 0 %>
+		    	<h3>By country: </h3><br/>
+		    	<% @countries.each do |country| %>
+		    		<a href="<%= url_for country_path + '/' + country.name %>">
+			    		<div class="country">
+			    			<%= country.name %> (<%= country.item.size %>)
+			    		</div>
+		    		</a>
+		    	<% end %>
+	    	<% end %>
+	    </div>
+	</div>
 </div>
