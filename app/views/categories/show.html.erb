@@ -29,9 +29,14 @@
 	    <% end %>
     </div>
     <div class="large-4 medium-4 columns">
-    	<h4>By country: </h4>
+    	<h3>By country: </h3><br/>
     	<% @countries.each do |country| %>
-    		<p><%= country.name %></p>
+    		<a href="<%= url_for countries_path + country %>">
+	    		<div class="country">
+	    			<%= country.name %>
+	    		</div>
+    		</a>
     	<% end %>
     </div>
+</div>
 </div>

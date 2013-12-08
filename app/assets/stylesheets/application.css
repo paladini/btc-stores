@@ -12,5 +12,6 @@
  *= require foundation/normalize.css
  *= require foundation/foundation.min.css
  *= require_tree ./static/
+ *= require_tree ./categories/
  * require_tree .
  */

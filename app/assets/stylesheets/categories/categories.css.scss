@@ -1,0 +1,13 @@
+.country{
+	background-color: #FFF;
+	transition: all 0.2s linear 0.1s;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+}
+
+.country:hover{
+	background-color: #ddd3d3;
+	transition: all 0.3s linear 0.1s;
+	border-color: #000;	
+}

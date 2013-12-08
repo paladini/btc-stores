@@ -277,3 +277,6 @@ Country.create!([
   {short_name: "ZW", name: "Zimbabwe"},
   {short_name: "AX", name: "Åland Islands"}
 ])
+Item.create!([
+  {name: "BitcoinStore", description: "One of the first bitcoin stores in the Internet - and probably the best.", url_original: "https://www.bitcoinstore.com/", url_shortned: "http://cur.lv/5b806", isActive: 1, country_id: 249, category_id: 1}
+])
