@@ -7,16 +7,20 @@
     </div>
 
     <div class="large-12 columns">
-      <div class="row collapse">
-        <div class="large-2 columns">&nbsp;</div>
-        <div class="small-6 columns">
-          <input type="text" placeholder="Search stores by term, name or country..." />
+      <%= form_tag items_path, :method => "get" do %>
+        <div class="row collapse">
+          <div class="large-2 columns">&nbsp;</div>
+          <div class="small-6 columns">
+            <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
+           <!--  <input type="text" placeholder="Search stores by term, name or country..." /> -->
+          </div>
+          <div class="small-2 columns">
+            <%= submit_tag "Search", :class => "postfix button", :name => nil %>
+            <!-- <a href="" class="postfix button">Search</a> -->
+          </div>
+          <div class="large-2 columns">&nbsp;</div>
         </div>
-        <div class="small-2 columns">
-          <a href="" class="postfix button">Search</a>
-        </div>
-        <div class="large-2 columns">&nbsp;</div>
-      </div>
+      <% end %>
     </div>
 
     <br/>

@@ -4,7 +4,38 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    
+    if params[:search]
+      text_of_search = params[:search]
+      text_of_search = text_of_search.downcase
+
+      @items = []
+
+      # Search all Items where name or search is similar to searched terms.
+      Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
+        {:search => "%" + text_of_search + "%" }).each do |item|
+        @items << item
+      end
+    else
+      @items = Item.all
+    end
+  end
+
+  def search
+
+    text_of_search = params[:terms]
+    text_of_search = text_of_search.downcase
+
+    @items = []
+
+    # Search all Items where name or search is similar to searched terms.
+    @items << Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
+      {:search => "%" + text_of_search + "%" })
+    
+    #@stores << Item.find(:all, :conditions => ["lower(name) = ?", text_of_search.downcase])
+    #@stores << Item.find(:all, :conditions => "lower(description) ")
+
+
   end
 
   # GET /items/1
