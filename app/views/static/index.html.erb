@@ -78,8 +78,8 @@
 <div class="row">
   <div class="large-12 columns large-centered text-center">
     <!-- <a href="<%= url_for new_item_path %>" data-reveal-id="myModal" data-reveal-ajax="true" class="button large secondary">Add a store to our website</a> -->
-    <%= link_to "Add a store to our website", '#', :class => "button large secondary", data: {:'reveal-id' => 'signupModal'} %>
-    <div id="signupModal" class="reveal-modal">
+    <%= link_to "Add a store to our website", '#', :class => "button large secondary", data: {:'reveal-id' => 'myModal'} %>
+    <div id="myModal" class="reveal-modal" data-reveal>
       <%= render '/items/form' %>
       <a class="close-reveal-modal">&#215;</a>
     </div>
