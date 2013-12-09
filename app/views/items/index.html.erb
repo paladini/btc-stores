@@ -1,27 +1,70 @@
 <div class="panel" id="cinza">
   <div class="row">
-    <h3>Results for:</h3>
-    <br/>
-    <% @items.each do |store| %>
-      <% if store.isActive == 1 %>
-        <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
-          <div class="store">
-            <div class="store-above">
-              <div class="store-left">
-                <div class="store-name">
-                  <h4><%= store.name %></h4>
+    
+    <% if @searching %>
+      <% if @items.size > 0 %>
+        <h3>Results for:</h3>
+        <br/>
+        <% @items.each do |store| %>
+          <% if store.isActive == 1 %>
+            <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
+              <div class="store">
+                <div class="store-above">
+                  <div class="store-left">
+                    <div class="store-name">
+                      <h4><%= store.name %></h4>
+                    </div>
+                    <div class="description">
+                      <%= store.description %>
+                    </div>
+                  </div>
                 </div>
-                <div class="description">
-                  <%= store.description %>
+                <div class="store-bottom">
+                  <div class="left">#<%= store.category.name %></div>
+                  <div class="right">#<%= store.country.name %></div>
                 </div>
               </div>
-            </div>
-            <div class="store-bottom">
-              <div class="left">#<%= store.category.name %></div>
-              <div class="right">#<%= store.country.name %></div>
-            </div>
-          </div>
-        </a>
+            </a>
+          <% end %>
+        <% end %>
+      <% else %>
+        <h5>Wow, seems that we don't have a Store here.</h5>
+        <h5> Try to search <a href="<%= url_for items_path %>">all stores</a> or help us improve the site and <a>add a store</a>.</h5>
+      <% end %>
+    
+    <!-- If user is not searching -->
+    <% else %>
+
+
+      <% if @items.size > 0 %>
+        <h3>All stores:</h3>
+        <br/>
+        <% @items.each do |store| %>
+          <% if store.isActive == 1 %>
+            <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
+              <div class="store">
+                <div class="store-above">
+                  <div class="store-left">
+                    <div class="store-name">
+                      <h4><%= store.name %></h4>
+                    </div>
+                    <div class="description">
+                      <%= store.description %>
+                    </div>
+                  </div>
+                </div>
+                <div class="store-bottom">
+                  <div class="left">#<%= store.category.name %></div>
+                  <div class="right">#<%= store.country.name %></div>
+                </div>
+              </div>
+            </a>
+          <% end %>
+        <% end %>
+      <% else %>
+        <h5>Wow, seems that we don't have a Store here.</h5>
+        <h5> Help us improve the site and <a>add a store</a>.</h5>
       <% end %>
     <% end %>
+  </div>
 </div>

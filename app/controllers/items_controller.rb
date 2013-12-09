@@ -5,11 +5,14 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     
+    @searching = false
+
     if params[:search]
       text_of_search = params[:search]
       text_of_search = text_of_search.downcase
 
       @items = []
+      @searching = true
 
       # Search all Items where name or search is similar to searched terms.
       Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
