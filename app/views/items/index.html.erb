@@ -3,7 +3,7 @@
     
     <% if @searching %>
       <% if @items.size > 0 %>
-        <h3>Results for:</h3>
+        <h3>Results for '<%= params[:search] %>':</h3>
         <br/>
         <% @items.each do |store| %>
           <% if store.isActive == 1 %>
@@ -28,8 +28,60 @@
           <% end %>
         <% end %>
       <% else %>
+        <h3>Results for '<%= params[:search] %>':</h3><br/>
         <h5>Wow, seems that we don't have a Store here.</h5>
         <h5> Try to search <a href="<%= url_for items_path %>">all stores</a> or help us improve the site and <a>add a store</a>.</h5>
+      <% end %>
+
+      <br/>
+      <br />
+      <br />
+      
+      <!-- Just show this section if the countries or categories array have more than zero results -->
+      <% if @categories.size > 0 or @countries.size > 0 %>
+        <h3>Maybe you're looking for:</h3>
+        <br />
+        
+        <div class="row collapse centered">
+       <div class="large-12 large-centered columns">
+        <!-- Show categories that have terms of the search -->
+        <% if @categories.size > 0 %>
+          <div class="large-5 columns">
+            <h5>Categories:</h5>
+            <% @categories.each do |category| %>
+              <a href="<%= url_for category %>">
+                <div class="store">
+                  <div class="store-above">
+                    <div class="store-name"> 
+                      <h4><%= category.name %> (<%= pluralize(category.item.size, 'store', 'stores')%>)</h4>
+                      <!--  This category have  stores. -->
+                    </div>
+                  </div>
+                </div>
+              </a>
+            <% end %>
+          </div>
+        <% end %>
+
+
+        <!-- Show countries that have terms of the search -->
+        <% if @countries.size > 0 %>
+          <div class="large-5 columns">
+            <h5>Countries:</h5>
+            <% @countries.each do |country| %>
+              <a href="">
+                <div class="country">
+                  <%= country.name %> (<%= pluralize(country.item.size, 'store', 'stores') %>)
+                </div>
+              </a>
+            <% end %>
+          </div>
+        <% end %>
+        </div>
+
+        <!-- <div class="large-2 columns">&nbsp;</div> -->
+        </div>
+        
       <% end %>
     
     <!-- If user is not searching -->

@@ -11,14 +11,37 @@ class ItemsController < ApplicationController
       text_of_search = params[:search]
       text_of_search = text_of_search.downcase
 
-      @items = []
+      # Tell to view that user is in Search, and not in Index
       @searching = true
 
-      # Search all Items where name or search is similar to searched terms.
+      # Receive all matching Stores.
+      @items = []
+
+      # Receive all matching Countries.
+      @countries = []
+
+      # Receive all matching Categories.
+      @categories = []
+      
+
+      # Search all Items where name or description is similar to searched terms.
       Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
         {:search => "%" + text_of_search + "%" }).each do |item|
         @items << item
       end
+
+      # Search all countries where name is similar to searched terms. 
+      Country.where("lower(name) LIKE :search", 
+        { :search => "%" + text_of_search + "%" }).order("name asc").each do |country|
+        @countries << country
+      end
+
+      # Search all categories where name is similar to searched terms.
+      Category.where("lower(name) LIKE :search", 
+        { :search => "%" + text_of_search + "%" }).order("name asc").each do |category|
+        @categories << category
+      end
+
     else
       @items = Item.all
     end
