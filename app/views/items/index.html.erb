@@ -25,12 +25,14 @@
                 </div>
               </div>
             </a>
+            <br/>
+            <br/>
           <% end %>
         <% end %>
       <% else %>
         <h3>Results for '<%= params[:search] %>':</h3><br/>
         <h5>Wow, seems that we don't have a Store here.</h5>
-        <h5> Try to search <a href="<%= url_for items_path %>">all stores</a> or help us improve the site and <a>add a store</a>.</h5>
+        <h5> Try to search <a href="<%= url_for items_path %>">all stores</a> or help us improve the site and <a href="<%= url_for new_item_path %>">add a store</a>.</h5>
       <% end %>
 
       <br/>
@@ -111,11 +113,13 @@
                 </div>
               </div>
             </a>
+            <br/>
+            <br/>
           <% end %>
         <% end %>
       <% else %>
         <h5>Wow, seems that we don't have a Store here.</h5>
-        <h5> Help us improve the site and <a>add a store</a>.</h5>
+        <h5> Help us improve the site and <a href="<%= url_for new_item_path %>">add a store</a>.</h5>
       <% end %>
     <% end %>
   </div>
