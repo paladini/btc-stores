@@ -4,15 +4,19 @@
       <div class="small-4 large-4 columns">
         <h1><%= link_to "BTC-Stores", :controller => "static", :action => "index" %></h1>
       </div>
-      <div id="searchbar-top">
-        <%= form_tag items_path, :method => "get" do %>
-        <div class="small-6 columns">
-           <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
+      <%= form_tag items_path, :method => "get", :html => { :style => "margin: 0px; padding: 0px;"} do %>
+        <div id="searchbar-top">
+          <div class="row collapse">
+            
+            <div class="small-6 large-6 columns">
+               <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
+            </div>
+            <div class="small-2 large-2 columns">
+              <%= submit_tag "Search", :class => "postfix button prefix", :name => nil %>
+            </div>
+           
+          </div>
         </div>
-        <div class="small-2 columns">
-          <%= submit_tag "Search", :class => "postfix button prefix", :name => nil %>
-        </div>
-        <% end %>
-      </div>
+      <% end %>
     </div>
 </header>
