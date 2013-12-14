@@ -100,6 +100,10 @@ footer a{
 	/* padding: 10px; */
 }
 
+.active{
+	background-color: #ddd3d3 !important;
+}
+
 .store:hover{
 	background-color: #ddd3d3;
 	transition: all 0.3s linear 0.1s;
