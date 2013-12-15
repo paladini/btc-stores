@@ -1,4 +1,4 @@
-<header id="index-header">
+<main id="index-main">
     <div class="row">
       <div class="small-12 large-12 columns text-center">
         <h1>BTC-Stores</h1> 
@@ -12,11 +12,9 @@
           <div class="large-2 columns">&nbsp;</div>
           <div class="small-6 columns">
             <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
-           <!--  <input type="text" placeholder="Search stores by term, name or country..." /> -->
           </div>
           <div class="small-2 columns">
             <%= submit_tag "Search", :class => "postfix button", :name => nil %>
-            <!-- <a href="" class="postfix button">Search</a> -->
           </div>
           <div class="large-2 columns">&nbsp;</div>
         </div>
@@ -48,53 +46,21 @@
       </nav>
     </div>
     </div>
-</header>
 
+</main>
 
-
-   <% if false %>
-<div class="panel" id="cinza-home">
+<footer id="index-footer">
   <div class="row">
-    <div class="large-12 columns large-centered text-center">
-      <a href="<%= url_for new_item_path %>" data-reveal-id="myModal" data-reveal-ajax="true" class="button large secondary">Add a store to our website</a>
+    <div class="large-12 large-centered text-center columns">
+      <%= link_to "Home Page", controller: 'static', action: 'index' %>
+      <%= link_to "About", controller: 'static', action: 'about' %>
+      <%= link_to "Add a store", new_item_path %>
+      <%= link_to "All categories", categories_path %>
+      <% if false %><%= link_to "Advertise" %><% end %>
+      <%= link_to "Contact", controller: 'static', action: 'contact' %>
     </div>
   </div>
-</div>
-
- 
-  <div class="panel" id="cinza">
-  <div class="row">
-    <h3>Recently added stores:</h3>
-    <br/>
-    <% @items.each do |store| %>
-      <% if store.isActive == 1 %>
-        <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
-          <div class="store">
-            
-            <div class="store-above">
-              <div class="store-left">
-                <div class="store-name">
-                  <h4><%= store.name %></h4>
-                </div>
-                <div class="description">
-                  <%= store.description %>
-                </div>
-              </div>
-            </div>
-            <div class="store-bottom">
-              <div class="left">#<%= store.category.name %></div>
-              <div class="right">#<%= store.country.name %></div>
-            </div>
-          </div>
-        </a>
-        <br/><br />
-      <% end %>
-    <% end %>
-  </div>
-  </div>
-  <br/><br/>
-<% end %>
-
+</footer>
 
 
 
