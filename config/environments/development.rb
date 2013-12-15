@@ -26,4 +26,7 @@ BtcStores::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.assets.enabled = true
+  config.assets.paths << "#{Rails.root}/app/assets/fonts" 
 end
