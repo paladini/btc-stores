@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def index
   	@render_header = true
-    @render_footer = true
+    @render_footer = false
     @items = Item.order('created_at desc').limit(10)
     @item = Item.new
   end
@@ -11,7 +11,7 @@ class StaticController < ApplicationController
   end
 
   def contact
-  	@render_header = true
+  	@render_header = false
   end
 
   def resume
