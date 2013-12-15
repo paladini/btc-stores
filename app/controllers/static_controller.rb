@@ -6,7 +6,7 @@ class StaticController < ApplicationController
   end
 
   def about
-  	@render_header = true
+  	@render_header = false
   end
 
   def contact
