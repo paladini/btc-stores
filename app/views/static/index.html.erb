@@ -50,14 +50,19 @@
     </div>
 </header>
 
-<div class="panel" id="cinza">
+
+
   
+<div class="panel" id="cinza-home">
   <div class="row">
     <div class="large-12 columns large-centered text-center">
       <a href="<%= url_for new_item_path %>" data-reveal-id="myModal" data-reveal-ajax="true" class="button large secondary">Add a store to our website</a>
     </div>
   </div>
+</div>
 
+  <% if false %>
+  <div class="panel" id="cinza">
   <div class="row">
     <h3>Recently added stores:</h3>
     <br/>
@@ -85,8 +90,13 @@
         <br/><br />
       <% end %>
     <% end %>
-</div>
-<br/><br/>
-</div>
+  </div>
+  </div>
+  <br/><br/>
+<% end %>
+
+
+
+
 
 
