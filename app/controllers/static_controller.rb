@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def index
   	@render_header = true
-    @render_footer = false
+    @render_footer = true
     @items = Item.order('created_at desc').limit(10)
     @item = Item.new
   end

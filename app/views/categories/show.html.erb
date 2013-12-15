@@ -50,7 +50,7 @@
 		    		<a href="" 
 		    		class="country-row <%= country.short_name %>">
 			    		<div class="country <%= country.short_name %>">
-			    			<%= country.name %> (<%= country.item.size %>)
+			    			<%= country.name %> (<%= country.item.where("category_id = #{@category.id}").size %>)
 			    		</div>
 		    		</a>
 		    	<% end %>
