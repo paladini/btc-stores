@@ -37,9 +37,14 @@ header h1, h2, h3{
 #index-main{
 	padding: 10% 0% 0% 0%;
 	background-color: #000;
+	color: #FFF;
 	min-height: 90%;
 	width: 100%;
 	margin: 0;
+}
+
+#index-main h1 h2 h3{
+	color: #FFF;
 }
 
 #index-main h3{
@@ -73,11 +78,14 @@ header h1, h2, h3{
 	min-height: 100%;
 }
 
+/* General footer */
 footer{
 	font-size: 14px;
 	border: 0px;
 	bottom: 0;
 	left: 0;
+	background-color: #f2f2f2;
+	padding: 10px 0px;
 }
 
 footer .panel{
@@ -89,6 +97,7 @@ footer a{
 	padding-right: 20px;
 }
 
+/* Stores stylesheet */
 .store{
 	background-color: #FFF;
 	transition: all 0.2s linear 0.1s;
