@@ -24,7 +24,7 @@ Currently you can help us by a lot of different ways:
 
 ###About###
 
-BTC-Stores is developed by [Fernando Paladini](http://www.fpaladini.blogspot.com.br/) and Guilherme Sousa Passos, students of Science Computer and Philisopy in UFSC (Federal University of Santa Catarina - Brazil). 
+BTC-Stores is developed by [Fernando Paladini](http://www.fpaladini.blogspot.com.br/) and Guilherme Sousa Passos, students of Science Computer and Philisophy in UFSC (Federal University of Santa Catarina - Brazil). 
 
 This project is distributed under the GNU General Public License V2. 
  
