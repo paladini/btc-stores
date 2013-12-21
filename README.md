@@ -1,9 +1,9 @@
 BTC-Stores
 ----------
-###The first open-source indexer of sites that accept Bitcoin.###
+###The first open-source directory of sites that accept Bitcoin.###
 
 BTC-Stores is a project that aim to index all websites that accept Bitcoin as payment method. Currently online on
-[btc-stores](btc-stores.herokuapp.com), this project want be the best reference on the Internet when anyone talk about Bitcoin stores. 
+[btc-stores](www.btc-stores.com), this project want be the best reference on the Internet when anyone talk about Bitcoin stores. 
 
 **The website currently appears like this:**
 ![Main page of BTC-Stores](http://farm4.staticflickr.com/3676/11394913605_4aee957d88_o.png)
@@ -16,7 +16,7 @@ If you like this project, don't forget to **star** this - it really can help and
 
 Currently you can help us by a lot of different ways:
 
- - [Add stores to our database.](http://btc-stores.herokuapp.com/stores/new)
+ - [Add stores to our database.](http://www.btc-stores.com/stores/new)
  - [Develop code / Design pages](mailto:fernandopalad@gmail.com)
  - [Suggest things or improvements](https://github.com/paladini/btc-stores/issues/new)
  - [Report bugs](https://github.com/paladini/btc-stores/issues/new)
