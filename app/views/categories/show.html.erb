@@ -82,9 +82,7 @@
 			// Getting the name of the selected country
 			country = $(this).attr('class');
 			country = country.split('country-row ')[1];
-			nameOfCountry = $("." + country);
-
-			// console.log(country);
+			nameOfCountry = $(".country-link." + country);
 
 			// Verify if the selected item is "All" or any other countrie
 			if(country == "all"){
