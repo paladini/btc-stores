@@ -27,8 +27,8 @@
 					        </div>
 					      </div>
 					    </a>
-					    <br class="country-link"/>
-					    <br class="country-link"/>
+					    <br />
+					    <br />
 				    <% end %>
 			    <% end %>
 			<% else %>
@@ -47,7 +47,7 @@
 		    		</a>
 
 		    	<% @countries.each do |country| %>
-		    		<a href="" 
+		    		<a href="#" 
 		    		class="country-row <%= country.short_name %>">
 			    		<div class="country <%= country.short_name %>">
 			    			<%= country.name %> (<%= country.item.where("category_id = #{@category.id}").size %>)
@@ -84,7 +84,7 @@
 			country = country.split('country-row ')[1];
 			nameOfCountry = $("." + country);
 
-			console.log(country);
+			// console.log(country);
 
 			// Verify if the selected item is "All" or any other countrie
 			if(country == "all"){

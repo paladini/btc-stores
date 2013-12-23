@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
       populated_countries << item.country
     end
 
+    populated_countries = populated_countries.uniq
     @countries = populated_countries
 
     # Sorting "@countries" by name ascending
