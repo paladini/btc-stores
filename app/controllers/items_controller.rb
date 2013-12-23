@@ -8,8 +8,8 @@ class ItemsController < ApplicationController
     @searching = false
 
     if params[:search]
-      text_of_search = params[:search]
-      text_of_search = text_of_search.downcase
+      @text_of_search = params[:search]
+      @text_of_search = @text_of_search.downcase
 
       # Tell to view that user is in Search, and not in Index
       @searching = true
@@ -26,19 +26,19 @@ class ItemsController < ApplicationController
 
       # Search all Items where name or description is similar to searched terms.
       Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
-        {:search => "%" + text_of_search + "%" }).each do |item|
+        {:search => "%" + @text_of_search + "%" }).each do |item|
         @items << item
       end
 
       # Search all countries where name is similar to searched terms. 
       Country.where("lower(name) LIKE :search", 
-        { :search => "%" + text_of_search + "%" }).order("name asc").each do |country|
+        { :search => "%" + @text_of_search + "%" }).order("name asc").each do |country|
         @countries << country
       end
 
       # Search all categories where name is similar to searched terms.
       Category.where("lower(name) LIKE :search", 
-        { :search => "%" + text_of_search + "%" }).order("name asc").each do |category|
+        { :search => "%" + @text_of_search + "%" }).order("name asc").each do |category|
         @categories << category
       end
 
@@ -49,14 +49,14 @@ class ItemsController < ApplicationController
 
   def search
 
-    text_of_search = params[:terms]
-    text_of_search = text_of_search.downcase
+    # text_of_search = params[:terms]
+    # text_of_search = text_of_search.downcase
 
-    @items = []
+    # @items = []
 
-    # Search all Items where name or search is similar to searched terms.
-    @items << Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
-      {:search => "%" + text_of_search + "%" })
+    # # Search all Items where name or search is similar to searched terms.
+    # @items << Item.where("lower(name) LIKE :search or lower(description) LIKE :search", 
+    #   {:search => "%" + text_of_search + "%" })
     
     #@stores << Item.find(:all, :conditions => ["lower(name) = ?", text_of_search.downcase])
     #@stores << Item.find(:all, :conditions => "lower(description) ")

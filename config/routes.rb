@@ -14,7 +14,7 @@ BtcStores::Application.routes.draw do
   resources :country, :only => [:show, :index]
   
   # :path => "stores" - Just rename the path from .../items/1 to .../stores/1
-  resources :items, :path => "stores" 
+  resources :items, :path => "stores", :only => [:show, :index, :search, :new, :create]
   #, :only => [:show, :index, :new, :update, :destroy, :edit, :create, :search]
   #get "stores/search?term=:terms" => "item#search"
 

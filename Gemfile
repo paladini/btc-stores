@@ -41,6 +41,11 @@ gem 'friendly_id', "~> 5.0.1"
 # Generate a seeds.rb from a pre-existing database (seeds.rb populate the DB)
 gem "seed_dump", "~> 3.0.0"
 
+# Gems that help SEO:
+gem "headliner", "~> 0.1.3"
+
+gem 'meta-tags', :require => 'meta_tags'
+
 group :development do
 	gem 'sqlite3'
 end
