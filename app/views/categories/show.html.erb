@@ -39,7 +39,7 @@
 	    <div class="large-4 medium-4 columns">
 	    	<% if @category.item.size > 0 %>
 		    	<h3>By country: </h3><br/>
-		    	<a href="" 
+		    	<a href="#" 
 		    		class="country-row all">
 			    		<div class="country all">
 			    			All (<%= @category.item.size %>)
@@ -98,7 +98,7 @@
 				nameOfCountry.valueOf().show();
 
 				// Changing the style of the selected country
-				nameOfCountry.addClass("active");
+				$(".country." + country).addClass("active");
 			}	
 		});
 	});
