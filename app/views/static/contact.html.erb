@@ -1,6 +1,24 @@
 <!-- Page title -->
 <% title "Contact # Ready for a coffee?" %>
 
+<!-- Meta tags -->
+<% set_meta_tags :description => 'We want hear you. Come talk to us - The first open-source Bitcoin directory of sites that accept Bitcoin as payment method. We <3 You.',
+      :keywords => 'Bitcoin, Directory, Stores, payment, method, sites, accept, contact, btc', 
+      :robots => 'index, follow',
+      :author => ["Fernando Paladini", "Guilherme Passos"],
+      :og => {
+        :title    => "Contact US # BTC-Stores",
+        :type     => 'website',
+        :url      => request.original_url,
+        :site_name => 'BTC-Stores'
+      },
+      :twitter => {
+        :card => "summary",
+        :title => "Contact US # BTC-Stores",
+        :description => "We want hear you. Come talk to us - The first open-source Bitcoin directory of sites that accept Bitcoin as payment method. We <3 You."
+      }
+  %>
+
 <div class="panel" id="cinza">
   	<div class="row">
 		<h1># Contact</h1>

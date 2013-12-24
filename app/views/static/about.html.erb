@@ -1,6 +1,24 @@
 <!-- Page title -->
 <% title "About # Know our history" %>
 
+<!-- Meta tags -->
+<% set_meta_tags :description => "Know the history of BTC-Stores and his creators. You probably don't want know about two nerds, but if you want, here's the right place",
+      :keywords => 'Bitcoin, Directory, Stores, payment, method, sites, accept, about, btc', 
+      :robots => 'index, follow',
+      :author => ["Fernando Paladini", "Guilherme Passos"],
+      :og => {
+        :title    => "Know our History # BTC-Stores",
+        :type     => 'website',
+        :url      => request.original_url,
+        :site_name => 'BTC-Stores'
+      },
+      :twitter => {
+        :card => "summary",
+        :title => "Know our History # BTC-Stores",
+        :description => "Know the history of BTC-Stores and his creators. You probably don't want know about two nerds, but if you want, here's the right place"
+      }
+  %>
+
 <div class="panel" id="cinza">
   	<div class="row">
     	

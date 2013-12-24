@@ -42,9 +42,9 @@ gem 'friendly_id', "~> 5.0.1"
 gem "seed_dump", "~> 3.0.0"
 
 # Gems that help SEO:
-gem "headliner", "~> 0.1.3"
-
-gem 'meta-tags', :require => 'meta_tags'
+gem "headliner", "~> 0.1.3" # Customized titles for pages
+gem 'meta-tags', :require => 'meta_tags' # Meta tags for pages
+gem "dynamic_sitemaps" # Generate sitemap for the site
 
 group :development do
 	gem 'sqlite3'

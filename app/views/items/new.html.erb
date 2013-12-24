@@ -1,6 +1,24 @@
 <!-- Page title -->
 <% title "Add a New Store" %>
 
+<!-- Meta tags -->
+<% set_meta_tags :description => "Have a store that accept Bitcoin? Add your store to the first open-source Bitcoin directory in the world!",
+    :keywords => 'Bitcoin, Directory, Stores, payment, method, sites, accept, btc, add, register, insert', 
+    :author => ["Fernando Paladini", "Guilherme Passos"],
+    :robots => 'index,nofollow',
+    :og => {
+      :title    => "Add your Bitcoin store to the first open-source Bitcoin directory!",
+      :type     => 'website',
+      :url      => request.original_url,
+      :site_name => 'BTC-Stores'
+    },
+    :twitter => {
+      :card => "summary",
+      :title => "Add your Bitcoin store to the first open-source Bitcoin directory!",
+      :description => "Have a store that accept Bitcoin? Add your store to the first open-source Bitcoin directory in the world!"
+    }
+  %>
+
 <div class="panel" id="cinza">
   <div class="row">
   		<div class="large-6 large-centered columns">

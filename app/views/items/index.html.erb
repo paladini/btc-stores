@@ -1,6 +1,24 @@
 <!-- Page title -->
 <% title "General Search" %>
 
+<!-- Meta tags -->
+<% set_meta_tags :description => "Find stores with '#{@text_of_search}' that accept bitcoin as payment method. BTC-Stores - The first open-source Bitcoin directory of sites that accept Bitcoin.",
+    :keywords => 'Bitcoin, Directory, Stores, payment, method, sites, accept, btc', 
+    :author => ["Fernando Paladini", "Guilherme Passos"],
+    :robots => 'noindex, follow',
+    :og => {
+      :title    => "Find stores with '#{@text_of_search}' that accept Bitcoin",
+      :type     => 'website',
+      :url      => request.original_url,
+      :site_name => 'BTC-Stores'
+    },
+    :twitter => {
+      :card => "summary",
+      :title => "Find stores with '#{@text_of_search}' that accept Bitcoin",
+      :description => "Find stores with '#{@text_of_search}' that accept bitcoin as payment method. BTC-Stores - The first open-source Bitcoin directory of sites that accept Bitcoin."
+    }
+  %>
+
 <div class="panel" id="cinza">
   <div class="row">
     

@@ -19,6 +19,10 @@ BtcStores::Application.routes.draw do
   #get "stores/search?term=:terms" => "item#search"
 
   # get "categories/:name" => "categories#show"
+
+  # Routes to sitemap
+  get "sitemap.xml" => "home#sitemap", format: :xml, as: :sitemap
+  get "robots.txt" => "home#robots", format: :text, as: :robots
  
 
   # The priority is based upon order of creation: first created -> highest priority.

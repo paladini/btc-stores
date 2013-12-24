@@ -1,6 +1,24 @@
 <!-- Page title -->
 <% title "Browse All Categories" %>
 
+<!-- Meta tags -->
+<% set_meta_tags :description => "Search between our categories and discover great sites that accept Bitcoin as payment method.",
+      :keywords => 'Bitcoin, Directory, Stores, payment, method, sites, accept, btc, electronics, home, health, automotive, softwares, games, services', 
+      :robots => 'index, follow',
+      :author => ["Fernando Paladini", "Guilherme Passos"],
+      :og => {
+        :title    => "Browse All Categories # BTC-Stores",
+        :type     => 'website',
+        :url      => request.original_url,
+        :site_name => 'BTC-Stores'
+      },
+      :twitter => {
+        :card => "summary",
+        :title => "Browse All Categories # BTC-Stores",
+        :description => "Search between our categories and discover great sites that accept Bitcoin as payment method."
+      }
+  %>
+
 <div class="panel" id="cinza">
   <div class="row">
     <h3>Categories:</h3>
