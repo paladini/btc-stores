@@ -57,8 +57,6 @@ GEM
       treetop (~> 1.4.8)
     meta-tags (1.5.0)
       actionpack
-    metamagic (2.0.6)
-      rails (>= 3.0.0)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -141,7 +139,6 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   meta-tags
-  metamagic
   pg (~> 0.17.0)
   rails (= 4.0.0)
   rails_12factor
