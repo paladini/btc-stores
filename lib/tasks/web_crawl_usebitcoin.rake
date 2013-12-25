@@ -217,7 +217,7 @@ namespace :web_crawl_usebitcoin do
 
   # Create a file with all_stores (in JSON) to be imported to database later
   def write_to_file(all_stores, category)
-	  File.open("#{category.name}-data.txt", "w") { |f| f.write(all_stores.to_json) }
+	  File.open("public/all-stores-data.txt", "a") { |f| f.write(all_stores.to_json) }
   end
 
 end

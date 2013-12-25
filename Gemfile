@@ -46,6 +46,9 @@ gem "headliner", "~> 0.1.3" # Customized titles for pages
 gem 'meta-tags', :require => 'meta_tags' # Meta tags for pages
 gem "dynamic_sitemaps" # Generate sitemap for the site
 
+# Web craweler
+gem "nokogiri", "~> 1.6.1"
+
 group :development do
 	gem 'sqlite3'
 end

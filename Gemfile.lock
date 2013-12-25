@@ -58,8 +58,11 @@ GEM
     meta-tags (1.5.0)
       actionpack
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     pg (0.17.1)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -139,6 +142,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   meta-tags
+  nokogiri (~> 1.6.1)
   pg (~> 0.17.0)
   rails (= 4.0.0)
   rails_12factor

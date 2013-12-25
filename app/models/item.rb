@@ -24,5 +24,28 @@ class Item < ActiveRecord::Base
 	validates :country_id, presence: true
 	validates :category_id, presence: true
 
+	# Before save
+	before_save :generate_shortened_url
+	def generate_shortened_url
+		self.url_shortned = get_shortened_url(self.url_original)
+	end
+
+
+	# Get the shortened URL
+    def get_shortened_url(url)
+
+      # My ID of CoinURL
+      uuid = "5295ff66f2b7d971159514";
+
+      # Making the GET request for CoinURL
+      response = Unirest.get("https://coinurl.com/api.php?uuid=#{uuid}&url=#{url}", headers: {}, parameters: nil, auth:nil)
+
+      if(response.body == 'error')
+        return false;
+      else
+        return response.body;
+      end
+    end
+
 
 end

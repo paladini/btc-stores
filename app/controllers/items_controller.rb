@@ -83,14 +83,15 @@ class ItemsController < ApplicationController
   def create
     
     # Getting the shortened url for Item
-    shortened = get_shortened_url(item_params[:url_original])
+    #shortened = Items.get_shortened_url(item_params[:url_original])
+    #:url_shortned => shortened,
 
     # Creating a new Item
     @item = Item.new(
       :name => item_params[:name], 
       :description => item_params[:description],
       :url_original => item_params[:url_original],
-      :url_shortned => shortened,
+      
       :isActive => 1, 
       :country_id => item_params[:country_id],
       :category_id => item_params[:category_id]
@@ -142,20 +143,5 @@ class ItemsController < ApplicationController
       params[:item]
     end
 
-    # Get the shortened URL
-    def get_shortened_url(url)
-
-      # My ID of CoinURL
-      uuid = "5295ff66f2b7d971159514";
-
-      # Making the GET request for CoinURL
-      response = Unirest.get("https://coinurl.com/api.php?uuid=#{uuid}&url=#{url}", headers: {}, parameters: nil, auth:nil)
-
-      if(response.body == 'error')
-        return false;
-      else
-        return response.body;
-      end
-
-    end
+    
 end
