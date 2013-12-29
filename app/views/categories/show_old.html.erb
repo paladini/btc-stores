@@ -21,22 +21,44 @@
 
 
 <div class="panel" id="cinza">
-    <div class="row collapse">
-	  	<ul class="breadcrumbs">
-		  <li>
-		  	<a href="<%= url_for root_path %>">Home</a>
-		  </li>
-		  <li>
-		  	<a href="<%= url_for :controller => 'categories', :action => 'index' %>">Categories</a>
-		  </li>
-		  <li class="current">
-		  	<a href="#"><%= @category.name %></a>
-		  </li>
-		</ul>
-
-		<br/>
-
-		<div class="large-3 medium-3 columns">
+    <div class="row">
+	  	<h4><a href="<%= url_for :controller => 'categories', :action => 'index' %>"><< All categories</a></h4><br>
+	    <div class="large-8 medium-8 columns">
+		    <h3><%= @category.name %></h3><br>
+		    
+		    <% if @category.item.size > 0 %>
+			    <% @category.item.each do |store| %>
+				    <% if store.isActive == 1 %>
+					    <a href="<%= url_for store.url_shortned %>" 
+					    target="_blank" rel="nofollow" 
+					    class="country-link <%= store.country.short_name %>">
+					      <div class="store">
+					        <div class="store-above">
+						        <div class="store-left">
+						          <div class="store-name">
+						            <h4><%= store.name %></h4>
+						          </div>
+						          <div class="description">
+						            <%= store.description %>
+						          </div>
+						        </div>
+					        </div>
+					        <div class="store-bottom">
+					        	<div class="left">#<%= store.category.name %></div>
+					        	<div class="right">#<%= store.country.name %></div>
+					        </div>
+					      </div>
+					    </a>
+					    <br class="country-link <%= store.country.short_name %>"/>
+					    <br class="country-link <%= store.country.short_name %>"/>
+				    <% end %>
+			    <% end %>
+			<% else %>
+				<h5>Wow, seems that we don't have a Store here.</h5>
+				<h5> Try to search <a href="<%= url_for category_path %>">all categories</a> or help us improve the site and <a>add a store</a>.</h5>		
+			<% end %>
+	    </div>
+	    <div class="large-4 medium-4 columns">
 	    	<% if @category.item.size > 0 %>
 		    	<h3>By country: </h3><br/>
 		    	<a href="#" 
@@ -56,38 +78,6 @@
 		    	<% end %>
 	    	<% end %>
 	    </div>
-
-	    <div class="large-9 medium-9 columns">
-		    <% if @category.item.size > 0 %>
-			    <% @category.item.each do |store| %>
-				    <% if store.isActive == 1 %>
-					    <a href="<%= url_for store.url_shortned %>" 
-					    target="_blank" rel="nofollow" 
-					    class="country-link <%= store.country.short_name %>">
-					      <div class="store">
-					          <div class="store-name">
-					            <h4><%= store.name %></h4>
-					          </div>
-					          <img src="http://usebitcoins.info/images/artimages/34/online2.jpg"/>
-					          <div class="description">
-					            <%= store.description %>
-					          </div>
-					        <!-- <div class="store-bottom">
-					        	<div class="left">#<%= store.category.name %></div>
-					        	<div class="right">#<%= store.country.name %></div>
-					        </div> -->
-					      </div>
-					    </a>
-					    <!-- <br class="country-link <%= store.country.short_name %>"/>
-					    <br class="country-link <%= store.country.short_name %>"/> -->
-				    <% end %>
-			    <% end %>
-			<% else %>
-				<h5>Wow, seems that we don't have a Store here.</h5>
-				<h5> Try to search <a href="<%= url_for category_path %>">all categories</a> or help us improve the site and <a>add a store</a>.</h5>		
-			<% end %>
-	    </div>
-	    
 	</div>
 </div>
 

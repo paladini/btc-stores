@@ -26,3 +26,17 @@
   font-weight: 600;
   font-style: bold;
 }
+
+.left-collapse {
+  .columns {
+    padding-left: 0;
+  }
+}
+
+.right-collapse {
+  .columns {
+    padding-right: 0;
+  }
+}
+
+

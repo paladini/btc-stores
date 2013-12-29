@@ -73,7 +73,7 @@ header h1, h2, h3{
 }
 
 #cinza{
-	padding-top: 5%;
+	padding-top: 3%;
 	margin: 0px;
 	min-height: 100%;
 }
@@ -101,8 +101,25 @@ footer a{
 .store{
 	background-color: #FFF;
 	transition: all 0.2s linear 0.1s;
-	width: 100%;
+	width: 45%;
+	margin: 0% 0% 5% 5%;
+	min-height: 200px;
 	height: auto;
+	display: inline-block;
+	float: left;
+	padding: 2%;
+	border: 1px dotted #888;
+}
+
+a .store{
+	color: #666;
+}
+
+.store img{
+	margin: 20px auto;
+	display: block;
+	height: 147px;
+	width: 200px;
 }
 
 .active{
@@ -110,10 +127,23 @@ footer a{
 }
 
 .store:hover{
+	transition: all 0.3s linear 0.1s;
+	border: 1px solid #888;
+	/* border-color: #000;
+	 -moz-box-shadow: -5px -5px #888;
+	-webkit-box-shadow: -5px -5px #888;
+	box-shadow: -5px -5px #888; */
+}
+
+/* 
+.store:hover{
 	background-color: #ddd3d3;
 	transition: all 0.3s linear 0.1s;
 	border-color: #000;
 }
+
+
+
 
 .store-left{
 	display: inline-block;
@@ -140,7 +170,7 @@ footer a{
 	padding: 10px;
 	margin: 0px;
 	border-top: 1px solid #bdb3b3;
-}
+} 
 
 .store-bottom .left {
 	height: 100%;
@@ -149,6 +179,10 @@ footer a{
 .store-bottom .right {
 	height: 100%;
 }
+
+*/
+
+
 
 /* Logo */
 #logo{
