@@ -52,6 +52,13 @@ gem "nokogiri", "~> 1.6.1"
 # Fontawesome - Bootstrap icons
 gem "font-awesome-rails"
 
+# Images easy for Rails
+gem 'paperclip'
+
+# Take screenshoots from websites
+gem "selenium-webdriver", "~> 2.39.0"
+gem "imgkit", "~> 1.3.10"
+
 group :development do
 	gem 'sqlite3'
 end

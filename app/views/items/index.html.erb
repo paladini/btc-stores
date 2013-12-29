@@ -20,40 +20,49 @@
   %>
 
 <div class="panel" id="cinza">
-  <div class="row">
+  <div class="row collapse">
     
     <% if @searching %>
+      
+      <ul class="breadcrumbs">
+        <li>
+          <a href="<%= url_for root_path %>">Home</a>
+        </li>
+        <li class="current">
+          <a href="#">Results for: " <%= params[:search] %> "</a>
+        </li>
+      </ul>
+      <br/>
+
       <% if @items.size > 0 %>
-        <h3>Results for '<%= params[:search] %>':</h3>
-        <br/>
-        <% @items.each do |store| %>
-          <% if store.isActive == 1 %>
-            <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
-              <div class="store">
-                <div class="store-above">
-                  <div class="store-left">
-                    <div class="store-name">
-                      <h4><%= store.name %></h4>
-                    </div>
-                    <div class="description">
-                      <%= store.description %>
-                    </div>
+        <div class="large-3 medium-3 columns">
+          <div class="filter-by">
+            
+          </div>
+        </div>  
+
+        <div class="large-9 medium-9 columns">
+          <% @items.each do |store| %>
+            <% if store.isActive == 1 %>
+              <a href="<%= url_for store.url_shortned %>" target="_blank" rel="nofollow">
+                <div class="store">
+                  <div class="store-name">
+                    <h4><%= store.name %></h4>
+                  </div>
+                  <img src="http://usebitcoins.info/images/artimages/34/online2.jpg"/>
+                  <div class="description">
+                    <%= truncate(store.description, :length => 122) %>
                   </div>
                 </div>
-                <div class="store-bottom">
-                  <div class="left">#<%= store.category.name %></div>
-                  <div class="right">#<%= store.country.name %></div>
-                </div>
-              </div>
-            </a>
-            <br/>
-            <br/>
+              </a>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       <% else %>
-        <h3>Results for '<%= params[:search] %>':</h3><br/>
-        <h5>Wow, seems that we don't have a Store here.</h5>
-        <h5> Try to search <a href="<%= url_for items_path %>">all stores</a> or help us improve the site and <a href="<%= url_for new_item_path %>">add a store</a>.</h5>
+        <div class="small-12 medium-12 large-12 columns text-center">
+          <h4>Wow, seems that we don't have a Store here.</h4>
+          <h4> Try to search <a href="<%= url_for categories_path %>">all stores</a> or help us improve the site and <a href="<%= url_for new_item_path %>">add a store</a>.</h4>
+        </div>
       <% end %>
 
       <br/>

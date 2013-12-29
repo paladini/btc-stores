@@ -80,10 +80,10 @@
 			    <% end %>
 		    </div>
 	    <% else %>
-			<div class="large-12 medium-12 small-12 text-center">
-				<h4>Wow, seems that we don't have a Store here.</h4>
-				<h4> Try to search <a href="<%= url_for category_path %>">all categories</a> or help us improve the site and <a>add a store</a>.</h4>	
-			</div>	
+			<div class="small-12 medium-12 large-12 columns text-center">
+	          <h4>Wow, seems that we don't have a Store here.</h4>
+	          <h4> Try to search <a href="<%= url_for categories_path %>">all stores</a> or help us improve the site and <a href="<%= url_for new_item_path %>">add a store</a>.</h4>
+	        </div>
 		<% end %>
 	</div>
 </div>
