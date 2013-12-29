@@ -103,9 +103,11 @@ footer a{
 	transition: all 0.2s linear 0.1s;
 	width: 45%;
 	margin: 0% 0% 5% 5%;
-	min-height: 200px;
+	/* min-height: 200px; */
+
+	min-height: 293px;
 	height: auto;
-	display: inline-block;
+	/* display: table; */
 	float: left;
 	padding: 2%;
 	border: 1px dotted #888;
@@ -122,6 +124,11 @@ a .store{
 	width: 200px;
 }
 
+.store-inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+
 .active{
 	background-color: #ddd3d3 !important;
 }
@@ -135,15 +142,21 @@ a .store{
 	box-shadow: -5px -5px #888; */
 }
 
+
+.filter-by{
+	background-color: #FFF;
+	height: auto;
+	width: 100%;
+	padding: 5%;
+}
+
+
 /* 
 .store:hover{
 	background-color: #ddd3d3;
 	transition: all 0.3s linear 0.1s;
 	border-color: #000;
 }
-
-
-
 
 .store-left{
 	display: inline-block;

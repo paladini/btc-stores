@@ -37,24 +37,26 @@
 		<br/>
 
 		<div class="large-3 medium-3 columns">
-	    	<% if @category.item.size > 0 %>
-		    	<h3>By country: </h3><br/>
-		    	<a href="#" 
-		    		class="country-row all">
-			    		<div class="country all">
-			    			All (<%= @category.item.size %>)
-			    		</div>
-		    		</a>
+	    	<div class="filter-by">
+		    	<% if @category.item.size > 0 %>
+			    	<h3>By country: </h3><br/>
+			    	<a href="#" 
+			    		class="country-row all">
+				    		<div class="country all">
+				    			All (<%= @category.item.size %>)
+				    		</div>
+			    		</a>
 
-		    	<% @countries.each do |country| %>
-		    		<a href="#" 
-		    		class="country-row <%= country.short_name %>">
-			    		<div class="country <%= country.short_name %>">
-			    			<%= country.name %> (<%= country.item.where("category_id = #{@category.id}").size %>)
-			    		</div>
-		    		</a>
+			    	<% @countries.each do |country| %>
+			    		<a href="#" 
+			    		class="country-row <%= country.short_name %>">
+				    		<div class="country <%= country.short_name %>">
+				    			<%= country.name %> (<%= country.item.where("category_id = #{@category.id}").size %>)
+				    		</div>
+			    		</a>
+			    	<% end %>
 		    	<% end %>
-	    	<% end %>
+	    	</div>
 	    </div>
 
 	    <div class="large-9 medium-9 columns">
@@ -65,21 +67,15 @@
 					    target="_blank" rel="nofollow" 
 					    class="country-link <%= store.country.short_name %>">
 					      <div class="store">
-					          <div class="store-name">
-					            <h4><%= store.name %></h4>
-					          </div>
-					          <img src="http://usebitcoins.info/images/artimages/34/online2.jpg"/>
-					          <div class="description">
-					            <%= store.description %>
-					          </div>
-					        <!-- <div class="store-bottom">
-					        	<div class="left">#<%= store.category.name %></div>
-					        	<div class="right">#<%= store.country.name %></div>
-					        </div> -->
+						          <div class="store-name">
+						            <h4><%= store.name %></h4>
+						          </div>
+						          <img src="http://usebitcoins.info/images/artimages/34/online2.jpg"/>
+						          <div class="description">
+						            <%= truncate(store.description, :length => 124) %>
+						          </div>
 					      </div>
 					    </a>
-					    <!-- <br class="country-link <%= store.country.short_name %>"/>
-					    <br class="country-link <%= store.country.short_name %>"/> -->
 				    <% end %>
 			    <% end %>
 			<% else %>
