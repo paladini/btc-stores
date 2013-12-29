@@ -3,18 +3,27 @@
       
       <div class="small-4 large-4 columns">
         <h1><%= link_to "BTC-Stores", :controller => "static", :action => "index" %></h1>
+          <div class="small-2 large-2 columns">
+        &nbsp;
+        </div>
       </div>
+      
       <%= form_tag items_path, :method => "get", :style => "margin: 0px; padding: 0px;" do %>
-        <div id="searchbar-top">
-          <div class="row collapse">
-            
-            <div class="small-6 large-6 columns">
-               <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
+        <div class="small-8 large-8 columns">
+          <div id="searchbar-top">
+            <div class="row collapse">
+              
+              <div class="small-11 large-11 columns">
+                 <%= search_field_tag :search, params[:search], :id => "search_field", :placeholder => "Search stores by term, name or country..." %>
+                 
+              </div>
+
+              <div class="small-1 large-1 columns">
+                <%= button_tag(:class => "postfix button prefix", :name => nil) do %>
+                    <span class="postfix"><i class="fa fa-search fa-2"></i> </span>
+                <% end %>
+               </div>             
             </div>
-            <div class="small-2 large-2 columns">
-              <%= submit_tag "Search", :class => "postfix button prefix", :name => nil %>
-            </div>
-           
           </div>
         </div>
       <% end %>

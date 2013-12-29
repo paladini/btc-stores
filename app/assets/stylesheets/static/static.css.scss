@@ -129,10 +129,6 @@ a .store{
 	vertical-align: middle;
 }
 
-.active{
-	background-color: #ddd3d3 !important;
-}
-
 .store:hover{
 	transition: all 0.3s linear 0.1s;
 	border: 1px solid #888;
@@ -143,12 +139,6 @@ a .store{
 }
 
 
-.filter-by{
-	background-color: #FFF;
-	height: auto;
-	width: 100%;
-	padding: 5%;
-}
 
 
 /* 

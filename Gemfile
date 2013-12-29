@@ -49,6 +49,9 @@ gem "dynamic_sitemaps" # Generate sitemap for the site
 # Web craweler
 gem "nokogiri", "~> 1.6.1"
 
+# Fontawesome - Bootstrap icons
+gem "font-awesome-rails"
+
 group :development do
 	gem 'sqlite3'
 end

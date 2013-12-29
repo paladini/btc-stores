@@ -11,20 +11,22 @@
  *= require_self
  *= require foundation/normalize.css
  *= require foundation/foundation.min.css
+ * require font-awesome
  *= require_tree ./static/
  *= require_tree ./categories/
  * require_tree .
  */
 
- @font-face {
-  font-family: 'Cubano';    
-  src: url('/assets/cubano-regular-webfont.eot');
-  src: url('/assets/cubano-regular-webfont.eot?iefix') format('eot'),
-  url('/assets/cubano-regular-webfont.woff') format('woff'),
-  url('/assets/cubano-regular-webfont.ttf') format('truetype'),
-  url('/assets/cubano-regular-webfont.svg#webfont3AwWkQXK') format('svg');
-  font-weight: 600;
-  font-style: bold;
+@import "font-awesome";
+@font-face {
+font-family: 'Cubano';    
+src: url('/assets/cubano-regular-webfont.eot');
+src: url('/assets/cubano-regular-webfont.eot?iefix') format('eot'),
+url('/assets/cubano-regular-webfont.woff') format('woff'),
+url('/assets/cubano-regular-webfont.ttf') format('truetype'),
+url('/assets/cubano-regular-webfont.svg#webfont3AwWkQXK') format('svg');
+font-weight: 600;
+font-style: bold;
 }
 
 .left-collapse {
